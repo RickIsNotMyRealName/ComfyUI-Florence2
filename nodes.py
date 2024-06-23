@@ -70,7 +70,7 @@ class DownloadAndLoadFlorence2Model:
         dtype = {"bf16": torch.bfloat16, "fp16": torch.float16, "fp32": torch.float32}[precision]
 
         model_name = model.rsplit('/', 1)[-1]
-        model_path = os.path.join(folder_paths.models_dir, "LLM", model_name)
+        model_path = os.path.join('/var/lib/comfyui/LLM', model_name)
         
         if not os.path.exists(model_path):
             print(f"Downloading Lumina model to: {model_path}")
